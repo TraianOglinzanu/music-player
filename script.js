@@ -25,31 +25,48 @@ window.onload = () => {
         },
 
         {
-            title: '',
-            artist: '',
-            song_path: '',
-            img_path: ''
+            title: 'Falling Down',
+            artist: 'Wild Cards ft. James Delaney',
+            song_path: 'music/fallingdown.mp3',
+            img_path: 'images/fallingdown.jpg'
         },
 
         {
-            title: '',
-            artist: '',
-            song_path: '',
-            img_path: ''  
+            title: 'Rather Be',
+            artist: 'Clean Bandit ft. Jess Glynne',
+            song_path: 'music/RatherBe.mp3',
+            img_path: 'images/ratherbe.jpg'  
         },
 
         {
-            title: '',
-            artist: '',
-            song_path: '',
-            img_path: ''
+            title: 'Stay',
+            artist: 'The Kid LAROI, Justin Bieber ',
+            song_path: 'music/stay.mp3',
+            img_path: 'images/stay.jpg'
         }
-        
+
     ]
 
     InitPlayer();
 
     function InitPlayer() {
+        current_song_index = 0;
+        next_song_index = current_song_index + 1;
+        UpdatePlayer();
+    }
+
+    function UpdatePlayer {
+
+        let song = songs[current_song_index];
+
+        song_img_el.style = "background-image: url('" + song.img_path + "')";
+
+        song_title_el.innerText = song.title;
+        song_artist_el.innerText = song.artist;
+
+        song_next_up_el.innerText = songs[next_song_index].title + "by" + songs[next_song_index].artist;
+
+        audio_player.src = song.song_path;
 
     }
 
