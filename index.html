@@ -11,18 +11,19 @@
 <body>
     <div class="app-wrapper">
         <div class="player">
-            <div class="song-img" style="background-image: url('./images/faded.jpg');"></div>
+            <audio id="music-player"></audio>
+            <div id="song-image" class="song-img" style="background-image: url('./images/faded.jpg');"></div>
             <div class="song-details">
-                <h2>Faded</h2>
-                <h3>Alan Walker</h3>
+                <h2 id="song-title">Faded</h2>
+                <h3 id="song-artist">Alan Walker</h3>
             </div>
             <div class="player-controls">
-                <button class="skip-btn skip-back fa-lg"><i class="fas fa-backward"></i></button>
-                <button class="play"><i class="fas fa-play fa-2x"></i></button>
-                <button class="skip-btn skip-back fa-lg"><i class="fas fa-forward"></i></button>
+                <button id="prev-btn" class="skip-btn"><i class="fas fa-backward fa-lg"></i></button>
+                <button id="play-btn" class="play"><i id="play-icon" class="fas fa-play fa-2x"></i></button>
+                <button id="next-btn" class="skip-btn"><i class="fas fa-forward fa-lg"></i></button>
             </div>
             <div class="next-up">
-                <p>Next up: <span>Falling Down by Wild Cards ft. James Delaney</span></p>
+                <p>Next up: <span id="song-next-up">Falling Down by Wild Cards ft. James Delaney</span></p>
             </div>
         </div>
     </div>
